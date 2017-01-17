@@ -4,6 +4,8 @@ A tensorflow implementation for [Perceptual Losses for Real-Time Style Transfer 
 
 This code is based on [Tensorflow-Slim](https://github.com/tensorflow/models/tree/master/slim) and [OlavHN/fast-neural-style](https://github.com/OlavHN/fast-neural-style).
 
+Cloned from https://github.com/hzy46/fast-neural-style-tensorflow with update to support python/3.5.2 and Tensorflow/0.12.1
+
 ## Samples:
 
 | configuration | style | sample |
@@ -17,8 +19,8 @@ This code is based on [Tensorflow-Slim](https://github.com/tensorflow/models/tre
 | [udnie.yml](https://github.com/hzy46/fast-neural-style-tensorflow/blob/master/conf/udnie.yml) |![](https://github.com/hzy46/fast-neural-style-tensorflow/blob/master/img/results/style_udnie.jpg)|  ![](https://github.com/hzy46/fast-neural-style-tensorflow/blob/master/img/results/udnie.jpg)  |
 
 ## Requirements and Prerequisites:
-- Python 2.7.x
-- Tensorflow(>= 0.11)
+- Python 3.5.2
+- Tensorflow 0.12.1
 
 And make sure you installed pyyaml:
 ```
