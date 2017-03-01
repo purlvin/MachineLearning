@@ -1,66 +1,37 @@
-# fast-neural-style-tensorflow
+## Welcome to GitHub Pages
 
-A tensorflow implementation for [Perceptual Losses for Real-Time Style Transfer and Super-Resolution](https://arxiv.org/abs/1603.08155).
+You can use the [editor on GitHub](https://github.com/purlvin/MachineLearning/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
-This code is based on [Tensorflow-Slim](https://github.com/tensorflow/models/tree/master/slim), [OlavHN/fast-neural-style](https://github.com/OlavHN/fast-neural-style) and [hzy46/fast-neural-style-tensorflow](https://github.com/hzy46/fast-neural-style-tensorflow)
+Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-## Samples:
+### Markdown
 
-| configuration | style | sample |
-| :---: | :----: | :----: |
-| [wave.yml](https://github.com/hzy46/fast-neural-style-tensorflow/blob/master/conf/wave.yml) |![](https://github.com/hzy46/fast-neural-style-tensorflow/blob/master/img/results/style_wave.jpg)|  ![](https://github.com/hzy46/fast-neural-style-tensorflow/blob/master/img/results/wave.jpg)  |
-| [cubist.yml](https://github.com/hzy46/fast-neural-style-tensorflow/blob/master/conf/cubist.yml) |![](https://github.com/hzy46/fast-neural-style-tensorflow/blob/master/img/results/style_cubist.jpg)|  ![](https://github.com/hzy46/fast-neural-style-tensorflow/blob/master/img/results/cubist.jpg)  |
-| [denoised_starry.yml](https://github.com/hzy46/fast-neural-style-tensorflow/blob/master/conf/denoised_starry.yml) |![](https://github.com/hzy46/fast-neural-style-tensorflow/blob/master/img/results/style_denoised_starry.jpg)|  ![](https://github.com/hzy46/fast-neural-style-tensorflow/blob/master/img/results/denoised_starry.jpg)  |
-| [mosaic.yml](https://github.com/hzy46/fast-neural-style-tensorflow/blob/master/conf/mosaic.yml) |![](https://github.com/hzy46/fast-neural-style-tensorflow/blob/master/img/results/style_mosaic.jpg)|  ![](https://github.com/hzy46/fast-neural-style-tensorflow/blob/master/img/results/mosaic.jpg)  |
-| [scream.yml](https://github.com/hzy46/fast-neural-style-tensorflow/blob/master/conf/scream.yml) |![](https://github.com/hzy46/fast-neural-style-tensorflow/blob/master/img/results/style_scream.jpg)|  ![](https://github.com/hzy46/fast-neural-style-tensorflow/blob/master/img/results/scream.jpg)  |
-| [feathers.yml](https://github.com/hzy46/fast-neural-style-tensorflow/blob/master/conf/feathers.yml) |![](https://github.com/hzy46/fast-neural-style-tensorflow/blob/master/img/results/style_feathers.jpg)|  ![](https://github.com/hzy46/fast-neural-style-tensorflow/blob/master/img/results/feathers.jpg)  |
-| [udnie.yml](https://github.com/hzy46/fast-neural-style-tensorflow/blob/master/conf/udnie.yml) |![](https://github.com/hzy46/fast-neural-style-tensorflow/blob/master/img/results/style_udnie.jpg)|  ![](https://github.com/hzy46/fast-neural-style-tensorflow/blob/master/img/results/udnie.jpg)  |
+Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-## Requirements and Prerequisites:
-- Python 3.5.2
-- Tensorflow 1.0.0
+```markdown
+Syntax highlighted code block
 
-And make sure you installed pyyaml:
-```
-pip install pyyaml
-```
+# Header 1
+## Header 2
+### Header 3
 
-## Use Trained Models:
+- Bulleted
+- List
 
-You can download all the 7 trained models from [Baidu Drive](https://pan.baidu.com/s/1i4GTS4d).
+1. Numbered
+2. List
 
-To generate a sample from the model "wave.ckpt-done", run:
+**Bold** and _Italic_ and `Code` text
 
-```
-python eval.py --model_file <your path to wave.ckpt-done> --image_file img/test.jpg
+[Link](url) and ![Image](src)
 ```
 
-Then check out generated/res.jpg.
+For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-## Train a Model:
-To train a model from scratch, you should first download [VGG16 model](http://download.tensorflow.org/models/vgg_16_2016_08_28.tar.gz) from Tensorflow Slim. Extract the file vgg_16.ckpt. Then copy it to the folder pretrained/ :
-```
-cd <this repo>
-mkdir pretrained
-cp <your path to vgg_16.ckpt>  pretrained/
-```
+### Jekyll Themes
 
-Then download the [COCO dataset](http://msvocds.blob.core.windows.net/coco2014/train2014.zip). Please unzip it, and you will have a folder named "train2014" with many raw images in it. Then create a symbol link to it:
-```
-cd <this repo>
-ln -s <your path to the folder "train2014"> train2014
-```
+Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/purlvin/MachineLearning/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-Train the model of "wave":
-```
-python train.py -c conf/wave.yml
-```
+### Support or Contact
 
-(Optional) Use tensorboard:
-```
-tensorboard --logdir models/wave/
-```
-
-Checkpoints will be written to "models/wave/".
-
-View the [configuration file](https://github.com/hzy46/fast-neural-style-tensorflow/blob/master/conf/wave.yml) for details.
+Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
