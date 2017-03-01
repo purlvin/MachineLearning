@@ -1,0 +1,2 @@
+ 
+python eval.py --model_file models/denoised_starry.ckpt-done --image_file img/Oran.jpg
