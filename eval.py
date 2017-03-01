@@ -51,7 +51,9 @@ def main(_):
             generated = tf.cast(generated, tf.uint8)
             end_time = time.time()
             tf.logging.info('Elapsed time: %fs' % (end_time - start_time))
-            generated_file = 'generated/res.jpg'
+            filename_image, file_extension = os.path.splitext(os.path.basename(FLAGS.image_file))
+            filename_model, tmp_extension  = os.path.splitext(os.path.basename(FLAGS.model_file))
+            generated_file = 'generated/' + filename_image + "-" + filename_model + file_extension
             if os.path.exists('generated') is False:
                 os.makedirs('generated')
             with open(generated_file, 'wb') as img:
